@@ -1,0 +1,216 @@
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Изменяем шрифт на более милый */
+    margin: 0;
+    padding: 0;
+    background-image: url('https://cdn.shopify.com/s/files/1/0596/0577/8593/products/puppiespackedfabric_2305b73d-7e88-4580-a726-980aae490356.jpg'); /* Путь к изображению */
+    background-size: cover; /* Чтобы изображение заполняло весь элемент */
+    background-position: center; /* Центрирование изображения */
+    background-repeat: no-repeat; /* Убираем повторение изображения */
+    background-attachment: fixed; /* Фиксируем фоновое изображение */
+    text-align: center; /* Центрирование текста */
+    display: grid; /* Используем Grid для body */
+    grid-template-rows: auto 1fr auto; /* Определяем строки для шапки, основного контента и подвала */
+    height: 100vh; /* Высота на весь экран */
+}
+
+main {
+    padding: 90px; /* Отступы для основного контента */
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
+    margin: 0 10%; /* Отступы по бокам */
+    border-radius: 8px; /* Закругление углов основного контента */
+    overflow-y: auto; /* Позволяем прокрутку основного контента */
+}
+
+footer {
+    background-color: #C19A6B; /* Цвет фона подвала */
+    text-align: center; /* Центрирование текста в подвале */
+    padding: 10px 0; /* Отступы для подвала */
+}
+
+
+nav ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+    display: flex; /* Используем Flexbox для навигации */
+    justify-content: center; /* Центрируем элементы навигации */
+    flex-wrap: wrap; /* Позволяем элементам переноситься на новую строку */
+}
+
+nav ul li {
+    margin: 0 20px; /* Уменьшаем отступы между элементами */
+}
+
+button, a {
+    background-color: #4F7942; /* Зеленый цвет фона */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем рамку */
+    border-radius: 50%; /* Делаем кнопку круглой */
+    padding: 5px 10px; /* Уменьшаем отступы внутри кнопки */
+    font-size: 16px; /* Уменьшаем размер шрифта */
+    margin: 5px; /* Уменьшаем отступы между кнопками */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s, transform 0.3s; /* Плавный переход */
+}
+
+button:hover, a:hover {
+    background-color: #45a049; /* Темнее при наведении */
+    transform: scale(1.05); /* Увеличение при наведении */
+}
+
+h2, h3 {
+    color: #098310; /* Цвет заголовка */
+}
+
+header {
+    background-color: #4F7942; /* Цвет фона шапки */
+    color: white; /* Цвет текста, чтобы он был виден на фоне */
+    padding: 30px; /* Отступы для шапки */
+}
+
+nav a {
+    color: white; /* Цвет ссылок в шапке */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+section h2 {
+    margin-bottom: 20px; /* Отступ снизу для заголовка */
+    font-size: 24px; /* Размер шрифта для заголовка */
+    color: #098310; /* Цвет текста заголовка */
+    text-align: center; /* Центрирование заголовка */
+    width: 100%; /* Ширина заголовка на всю ширину контейнера */
+}
+
+.shelter {
+    display: flex; /* Используем Flexbox для расположения изображения и текста */
+    align-items: center; /* Центрируем элементы по вертикали */
+    margin: 20px 0; /* Отступы между приютами */
+    padding: 20px; /* Отступы внутри контейнера приюта */
+    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    border-radius: 8px; /* Закругление углов */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для эффекта поднятия */
+}
+
+.shelter-image {
+    border-radius: 8px; /* Закругление углов изображений */
+    max-width: 150px; /* Максимальная ширина для изображений */
+    height: auto; /* Автоматическая высота изображений */
+    margin-right: 20px; /* Отступ справа от изображения */
+}
+
+.shelter-info {
+    flex: 1; /* Позволяем тексту занимать оставшееся пространство */
+}
+
+.shelter-info h3 {
+    margin: 0 0 10px; /* Отступы для заголовка */
+    color: #098310; /* Цвет заголовка */
+}
+
+.shelter-info p {
+    margin: 0; /* Убираем отступы для текста */
+    color: #333; /* Цвет текста */
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+    body {
+        grid-template-rows: auto 1fr auto; /* Убедитесь, что структура остается адаптивной */
+    }
+
+    main {
+        padding: 20px; /* Уменьшаем отступы для мобильных устройств */
+    }
+
+    .shelter {
+        flex-direction: column; /* Изменяем направление на вертикальное для мобильных устройств */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    .shelter-image {
+        margin-bottom: 10px; /* Отступ снизу для изображения */
+    }
+
+    nav ul {
+        flex-direction: column; /* Изменяем направление навигации на вертикальное */
+        align-items: center; /* Центрируем элементы навигации */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Увеличиваем отступы между элементами навигации */
+    }
+
+    button, a {
+        padding: 10px 15px; /* Увеличиваем отступы для кнопок на мобильных устройствах */
+        font-size: 18px; /* Увеличиваем размер шрифта для лучшей читаемости */
+    }
+
+    h2, h3 {
+        font-size: 20px; /* Уменьшаем размер заголовков для мобильных устройств */
+    }
+
+    .shelter-info p {
+        font-size: 14px; /* Уменьшаем размер текста для описания приютов */
+    }
+}
+
+html, body {
+    height: 100%; /* Устанавливаем высоту для html и body */
+    margin: 0; /* Убираем отступы */
+}
+
+body.dark-theme {
+    background-color: #0b450e; /* Цвет фона для body в темной теме */
+    color: #ffffff; /* Цвет текста для body в темной теме */
+}
+
+body.dark-theme main {
+    background-color: rgba(0, 0, 0, 0.9); /* Полупрозрачный черный фон для основного текста в темной теме */
+    color: #ffffff; /* Цвет текста для основного текста в темной теме */
+}
+
+header.dark-theme {
+    background-color: #023405; /* Цвет фона шапки в темной теме */
+}
+
+footer.dark-theme {
+    background-color: #2c1b04; /* Цвет фона подвала в темной теме */
+}
+
+nav.dark-theme a {
+    color: #ffffff; /* Цвет ссылок в шапке в темной теме */
+}
+/* Стили для текста в приютах в темной теме */
+body.dark-theme .shelter-info h3 {
+    color: #ffffff; /* Цвет заголовка в темной теме */
+}
+
+body.dark-theme .shelter-info p {
+    color: #dddddd; /* Цвет текста в темной теме */
+}
+
+/* Стили для кнопок и ссылок в темной теме */
+body.dark-theme button, 
+body.dark-theme a {
+    background-color: #023405; /* Темный цвет фона для кнопок и ссылок */
+    color: #ffffff; /* Цвет текста для кнопок и ссылок */
+}
+
+body.dark-theme button:hover, 
+body.dark-theme a:hover {
+    background-color: #1d4d05; /* Более светлый цвет фона при наведении */
+}
+.shelter-info a {
+    display: inline-block; /* Позволяет добавлять отступы */
+    margin-top: 10px; /* Отступ сверху для ссылок */
+}
+
+.no-style {
+    all: unset; /* Сбрасывает все стили */
+    display: inline; /* Устанавливает отображение как встроенный элемент */
+}
+
