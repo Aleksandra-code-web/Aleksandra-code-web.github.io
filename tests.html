@@ -4,53 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="https://pic.rutubelist.ru/user/47/e6/47e6fdfc5397d51e27097f8c8098b3a7.jpg" type="image/png">
     <title>Тесты на подходящего питомца</title>
 </head>
 <body>
     <header>
-        <h1>Тесты на подходящего питомца</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Главная</a></li>
+                <li><a href="celebrities.html">Звездные помошники</a></li>
+                <li><a href="dogs.html">Пушистые герои</a></li>
                 <li><a href="tests.html">Тесты</a></li>
                 <li><a href="shelters.html">Приюты</a></li>
                 <li><a href="help.html">Помощь</a></li>
+                <li><button id="themeToggleButton">Сменить тему</button></li>
             </ul>
         </nav>
+        <h1>Тесты на подходящего питомца</h1>
     </header>
     <main>
         <section>
-            <h2>Какой питомец вам подходит?</h2>
-            <div id="questionContainer">
-                <div id="question1">
-                    <h3>1. Какой у вас образ жизни?</h3>
-                    <button onclick="answerLifestyle('active')">Я ходячая батарейка</button>
-                    <button onclick="answerLifestyle('calm')">Хочу лежать со своим другом на чем ни будь мягком</button>
-                </div>
-                <div id="question2" style="display: none;">
-                    <h3>2. Нравится ли вам проводить время на улице или вы предпочитаете оставаться дома?</h3>
-                    <button onclick="answerOutdoor('yes')">Гулять?!</button>
-                    <button onclick="answerOutdoor('no')">Люблю поваляться на диване и расслабиться</button>
-                </div>
-                <div id="question3" style="display: none;">
-                    <h3>3. Нравится ли вам, когда питомец проявляет свою привязанность, или вы предпочитаете, чтобы он был более самостоятельным?</h3>
-                    <button onclick="answerAffection('affectionate')">Хочу проводить с ним всё своё свободное время</button>
-                    <button onclick="answerAffection('independent')">Самостоятельный мне подходит больше</button>
-                </div>
-                <div id="additionalQuestions" style="display: none;">
-                    <div id="question4" style="display: none;">
-                        <h3>4. Какое у вас жильё?</h3>
-                        <button onclick="answerHousing('apartment')">Квартира</button>
-                        <button onclick="answerHousing('house')">Дом</button>
-                        <button onclick="answerHousing('both')">Есть и дом и квартира</button>
-                    </div>
-                    <div id="question5" style="display: none;">
-                        <h3>5. Готовы ли вы к пушистым клочкам шерсти в доме по углам?</h3>
-                        <button onclick="answerFur('yes')">Конечно</button>
-                        <button onclick="answerFur('no')">Нет!</button>
-                    </div>
-                </div>
-            </div>
+            <h2>Почему заведение питомца полезно для вашего эмоционального состояния?</h2>
+            <p>
+                Заведение питомца может значительно улучшить ваше эмоциональное состояние. Исследования показывают, что взаимодействие с животными помогает снизить уровень стресса, тревожности и депрессии. Питомцы могут стать источником безусловной любви и поддержки, что особенно важно в трудные времена. 
+            </p>
+            <p>
+                Взаимодействие с животными способствует выработке гормонов счастья, таких как серотонин и дофамин, в мозге человека. Это не только улучшает настроение, но и помогает снижать чувство одиночества и изоляции.
+                Кроме того, питомцы расширяют круг общения, собирают вокруг себя единомышленников и подталкивают хозяев на знакомства с новыми людьми. А так же забота о питомце способствует развитию ответственности и рутины, что может помочь в улучшении общего психоэмоционального состояния. Прогулки с собакой или игра с кошкой могут стать отличным способом физической активности, что также положительно сказывается на настроении.
+            </p>
+            <button id="startTestButton">Начать тестирование</button>
+            <div id="questionContainer" style="display: none;"></div>
             <div id="result" style="display: none;">
                 <img id="resultImage" src="" alt="Подходящий питомец" width="300">
                 <h3 id="resultText"></h3>
@@ -58,102 +41,9 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Приюты для животных</p>
+        <p>&copy; 2025 Приюты для животных</p>
     </footer>
-
-    <script>
-        let petType = '';
-        let size = '';
-        let furType = '';
-
-        function answerLifestyle(lifestyle) {
-            if (lifestyle === 'active') {
-                petType = 'dog';
-            } else {
-                petType = 'cat';
-            }
-            document.getElementById('question1').style.display = 'none';
-            document.getElementById('question2').style.display = 'block';
-        }
-
-                function answerOutdoor(outdoor) {
-            if (outdoor === 'yes') {
-                petType = 'dog'; // Если ответ "Гулять?!", то это собака
-            } else {
-                petType = 'cat'; // Если ответ "Люблю поваляться на диване", то это кошка
-            }
-            document.getElementById('question2').style.display = 'none';
-            document.getElementById('question3').style.display = 'block';
-        }
-
-        function answerAffection(affection) {
-            if (affection === 'affectionate') {
-                petType = 'dog'; // Если ответ "Хочу проводить с ним всё своё свободное время", то это собака
-            } else {
-                petType = 'cat'; // Если ответ "Самостоятельный мне подходит больше", то это кошка
-            }
-            document.getElementById('question3').style.display = 'none';
-
-            // Если выбрана собака, показываем дополнительные вопросы
-            if (petType === 'dog') {
-                document.getElementById('additionalQuestions').style.display = 'block';
-                document.getElementById('question4').style.display = 'block';
-            } else {
-                showResult(); // Если выбрана кошка, сразу показываем результат
-            }
-        }
-
-        function answerHousing(housing) {
-            if (housing === 'apartment') {
-                size = 'small'; // Квартира - маленькая или средняя собака
-            } else if (housing === 'house') {
-                size = 'large'; // Дом - большая или средняя собака
-            } else {
-                size = 'medium'; // Есть и дом и квартира - средняя или маленькая собака
-            }
-            document.getElementById('question4').style.display = 'none';
-            document.getElementById('question5').style.display = 'block';
-        }
-
-        function answerFur(fur) {
-            if (fur === 'yes') {
-                // Подходит собака с любым типом шерсти
-                showResult('any');
-            } else {
-                // Подходит короткошерстная или лысая собака
-                showResult('short');
-            }
-        }
-
-        function showResult(furType = '') {
-            const resultDiv = document.getElementById('result');
-            const resultImage = document.getElementById('resultImage');
-            const resultText = document.getElementById('resultText');
-
-            if (petType === 'dog') {
-                if (size === 'small') {
-                    resultImage.src = 'images/small_dog.jpg'; // Путь к изображению маленькой собаки
-                    resultText.textContent = 'Маленькая собака';
-                } else if (size === 'medium') {
-                    resultImage.src = 'images/medium_dog.jpg'; // Путь к изображению средней собаки
-                    resultText.textContent = 'Средняя собака';
-                } else if (size === 'large') {
-                    resultImage.src = 'images/large_dog.jpg'; // Путь к изображению большой собаки
-                    resultText.textContent = 'Большая собака';
-                }
-
-                // Учитываем тип шерсти
-                if (furType === 'short') {
-                    resultText.textContent += ' (короткошерстная или лысая)';
-                }
-            } else if (petType === 'cat') {
-                resultImage.src = 'images/medium_cat.jpg'; // Путь к изображению кошки
-                resultText.textContent = 'Кошка';
-            }
-
-            resultDiv.style.display = 'block'; // Показываем результат
-            document.getElementById('additionalQuestions').style.display = 'none'; // Скрываем дополнительные вопросы
-        }
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
+
