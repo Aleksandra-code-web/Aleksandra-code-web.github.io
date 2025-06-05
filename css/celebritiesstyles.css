@@ -1,0 +1,46 @@
+.celebrity-content {
+    display: flex; /* Используем Flexbox для выравнивания */
+    align-items: center; /* Центрируем элементы по вертикали */
+    margin: 20px 0; /* Отступы между знаменитостями */
+    padding: 20px; /* Отступы внутри контейнера знаменитости */
+    background-color: rgba(0, 0, 0, 0.1); /* Полупрозрачный фон */
+    border-radius: 8px; /* Закругление углов */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для эффекта поднятия */
+}
+
+.celebrity-image {
+    border-radius: 8px; /* Закругление углов изображений */
+    max-width: 150px; /* Максимальная ширина для изображений */
+    height: auto; /* Автоматическая высота изображений */
+    margin-right: 20px; /* Отступ справа от изображения */
+}
+
+.celebrity-info {
+    flex: 1; /* Позволяем тексту занимать оставшееся пространство */
+}
+
+.celebrity-info h3 {
+    margin: 0 0 10px; /* Отступы для заголовка */
+    color: #098310; /* Цвет заголовка */
+}
+
+.celebrity-info p {
+    margin: 0; /* Убираем отступы для текста */
+    color: #333; /* Цвет текста */
+}
+body.dark-theme {
+    background-color: #121212; /* Цвет фона для тёмной темы */
+    color: #ffffff; /* Цвет текста для тёмной темы */
+}
+
+.dark-theme .celebrity-content {
+    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон для тёмной темы */
+}
+
+.dark-theme .celebrity-info h3 {
+    color: #76ff03; /* Цвет заголовка для тёмной темы */
+}
+
+.dark-theme .celebrity-info p {
+    color: #e0e0e0; /* Цвет текста для тёмной темы */
+}
