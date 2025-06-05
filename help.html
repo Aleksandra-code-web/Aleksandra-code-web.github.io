@@ -4,40 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="https://pic.rutubelist.ru/user/47/e6/47e6fdfc5397d51e27097f8c8098b3a7.jpg" type="image/png">
     <title>Помощь</title>
 </head>
 <body>
     <header>
-        <h1>Помощь приютам</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Главная</a></li>
+                <li><a href="celebrities.html">Звездные помошники</a></li>
+                <li><a href="dogs.html">Пушистые герои</a></li>
                 <li><a href="tests.html">Тесты</a></li>
                 <li><a href="shelters.html">Приюты</a></li>
                 <li><a href="help.html">Помощь</a></li>
+                <li><button id="themeToggleButton">Сменить тему</button></li>
             </ul>
         </nav>
+        <h1>Помощь приютам</h1>
     </header>
     <main>
-        <section>
+        <section id="help-section">
             <h2>Волонтерские мероприятия</h2>
-            <p>Приюты всегда нуждаются в помощи волонтеров. Вы можете помочь, участвуя в следующих мероприятиях:</p>
-            <ul>
-                <li>Прогулки с собаками</li>
-                <li>Уборка территории приюта</li>
-                <li>Организация благотворительных мероприятий</li>
-            </ul>
+            <p id="volunteer-description"></p>
+            <ul id="volunteer-activities"></ul>
+            <p><a href="https://vk.com/irkzoo" target="_blank" class="no-style">Ещё больше мероприятий здесь</a></p>
             <h2>Фонды помощи</h2>
-            <p>Существуют различные фонды, которые помогают приютам:</p>
-            <ul>
-                <li><a href="https://www.examplefund1.com">Фонд "Помощь животным"</a></li>
-                <li><a href="https://www.examplefund2.com">Фонд "Спасение животных"</a></li>
-                <li><a href="https://www.examplefund3.com">Фонд "Друзья животных"</a></li>
+            <h3>Ниже приведено насколько фондов куда вы можете сделать пожертвование</h3>
+            <ul id="funds-list">
+                <li><a href="https://dobrovmeste.ru/" target="_blank" class="no-style">Фонд "Добро вместе"</a></li>
+                <li><a href="https://irkutsknoi38.ru/companies/" target="_blank" class="no-style">Фонд "Ной"</a></li>
+                <li><a href="https://fondbelyikrolik.ru/priyut-sobachij-angel/" target="_blank" class="no-style">Фонд "Собачий ангел"</a></li>
             </ul>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Приюты для животных</p>
+        <p>&copy; 2025 Приюты для животных</p>
     </footer>
+    <script src="js/script.js"></script>
+    <script src="js/helpjs.js"></script>
 </body>
 </html>
